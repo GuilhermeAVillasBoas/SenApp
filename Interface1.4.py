@@ -344,10 +344,11 @@ def enviar_emails_inadimplecia(): # Envia os e-mails para os alunos
             
             else: # Se o e-mail estiver preenchido
 
+                
                 outlook = win32com.client.Dispatch('outlook.application') # Cria o objeto Outlook
                 mail = outlook.CreateItem(0) # Cria um novo e-mail
-                mail.To = 'gboas@firjan.com.br'#aba['B2'].value  # Substitua por 'gboas@firjan.com.br' para testes
-                #mail.CC = 'lugrangel@firjan.com.br'  # Cópia para outro destinatário, se necessário
+                mail.To = 'exemple@exemple.com.br'#aba['B2'].value  # Substitua para testes
+                #mail.CC = 'exemple@exemple.com.br'  # Cópia para outro destinatário, se necessário
                 mail.Subject = f"{aba['A2'].value} - Parcelas em aberto (TESTE)" # Assunto do e-mail
                 #Corpo do e-mail em HTML
                 mail.HTMLBody = f'''    
@@ -375,7 +376,7 @@ def enviar_emails_inadimplecia(): # Envia os e-mails para os alunos
                     <p>
                     Acreditando no sucesso da parceria entre V. Sª e esta Entidade, solicitamos
                     entrar em contato, pessoalmente no prazo de 10 dias ou através do Email:
-                    lugrangel@firjan.com.br, para que possamos normalizar as pendências de
+                    exemple@exemple.com.br, para que possamos normalizar as pendências de
                     débitos constantes no seu contrato.
                     </p>
                     <p>Atenciosamente,</p>
